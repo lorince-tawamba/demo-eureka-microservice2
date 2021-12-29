@@ -1,0 +1,45 @@
+
+# =================================
+# SERVICE CONFIGURATION
+# =================================
+server:
+  port: 8082
+
+# =================================
+# SERVICE CONFIGURATION
+# =================================
+spring:
+  application:
+    name: demo-eureka-microservice2
+
+# =================================
+# EUREKA CLIENT
+# =================================
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka/
+
+# =======================================
+# Enables Spring Boot Actuator end points
+# =======================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+
+# =======================================
+# Application config
+# =======================================
+tech:
+  satic:
+    demo:
+      centralize:
+        premiermicroservice:
+          msg: "EXEMPLE SPRING BOOT MICROSERVICE 2"
